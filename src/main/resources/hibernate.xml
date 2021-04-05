@@ -14,5 +14,7 @@
         <property name="hbm2ddl.auto">none</property>
 
         <mapping class="ru.arturios.entity.Product"/>
+        <mapping class="ru.arturios.entity.Consumer"/>
+        <mapping class="ru.arturios.entity.Cart"/>
     </session-factory>
 </hibernate-configuration>
