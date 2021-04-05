@@ -1,11 +1,16 @@
 package ru.arturios;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import ru.arturios.dao.ProductDAO;
+import ru.arturios.entity.Product;
 
-@SpringBootApplication
 public class Main {
     public static void main(String[] args) {
-        SpringApplication.run(Main.class, args);
+        ProductDAO dao = ProductDAO.getInstance();
+
+        Product product = new Product("Печенье", 150);
+
+        System.out.println(dao.findById(4L));
+
+        dao.getSession().close();
     }
 }
