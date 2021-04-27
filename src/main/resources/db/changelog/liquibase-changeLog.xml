@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<databaseChangeLog
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd"
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog">
+
+    <changeSet id="create_table" author="v.vasilyev">
+        <preConditions onFail="MARK_RAN">
+            <not>
+                <tableExists tableName="product"/>
+            </not>
+        </preConditions>
+        <createTable tableName="product">
+            <column name="id" type="bigint" autoIncrement="true">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="title" type="varchar(128)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="price" type="int"/>
+        </createTable>
+    </changeSet>
+
+    <changeSet id="insert_table" author="v.vasilyev">
+        <insert tableName="product">
+            <column name="title" value="potato"/>
+            <column name="price" value="10"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="tomato"/>
+            <column name="price" value="11"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="apple"/>
+            <column name="price" value="12"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="pineapple"/>
+            <column name="price" value="13"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="carrot"/>
+            <column name="price" value="14"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="peach"/>
+            <column name="price" value="15"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="kiwi"/>
+            <column name="price" value="16"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="onion"/>
+            <column name="price" value="17"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="corn"/>
+            <column name="price" value="18"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="mango"/>
+            <column name="price" value="19"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="orange"/>
+            <column name="price" value="20"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="lime"/>
+            <column name="price" value="21"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="beet"/>
+            <column name="price" value="22"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="pumpkin"/>
+            <column name="price" value="23"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="cabbage"/>
+            <column name="price" value="24"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="cherry"/>
+            <column name="price" value="25"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="lemon"/>
+            <column name="price" value="26"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="avocado"/>
+            <column name="price" value="27"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="pepper"/>
+            <column name="price" value="28"/>
+        </insert>
+        <insert tableName="product">
+            <column name="title" value="fig"/>
+            <column name="price" value="29"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog>
